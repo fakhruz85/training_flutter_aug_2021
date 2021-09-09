@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/models/user.dart';
+import 'package:myapp/widgets/nav_drawer.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -22,10 +23,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    final User args = ModalRoute.of(context)?.settings.arguments as User;
+    final User args = (ModalRoute.of(context)?.settings.arguments  as User);
 
     return Scaffold(
       appBar: AppBar(title: Text(widget.title)),
+      drawer: NavDrawer(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

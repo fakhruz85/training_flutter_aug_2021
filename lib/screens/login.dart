@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/dashboard.dart';
+import 'package:myapp/screens/dashboard.dart';
 import 'package:myapp/models/api_error.dart';
 import 'package:myapp/models/api_response.dart';
 import 'package:myapp/models/user.dart';
