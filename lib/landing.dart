@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/models/api_response.dart';
+import 'package:myapp/services/api.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class Landing extends StatefulWidget {
@@ -26,8 +28,9 @@ class _LandingState extends State<Landing> {
       Navigator.pushNamedAndRemoveUntil(
         context, '/login', ModalRoute.withName('/login'));
     }else{
-      //call proses login
-      
+      //call proses dapatkan profile daripada restful
+      ApiResponse _apiResponse = await getUserDetails(_userId);
+
       //push ke home
       Navigator.pushNamedAndRemoveUntil(
         context, '/home', ModalRoute.withName('/home'));
