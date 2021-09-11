@@ -29,7 +29,7 @@ class _NotesPageState extends State<NotesPage> {
 
   @override
   void dispose() {
-    NotesDatabase.instance.close();
+    //NotesDatabase.instance.close();
 
     super.dispose();
   }
